@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Local Notes</title>
+    <link rel="stylesheet" href="../assets/css/jquery.mobile-1.4.0.min.css">
+  </head>
+  <body>
+    <div data-role="page" id=“start“>
+      <div data-role="header" data-theme="b" data-position="fixed">
+        <a href="#settings" data-icon="gear" data-iconpos="notext"></a>
+        <h1>Locate Notes</h1>
+        <a href="#create" data-icon="plus" data-iconpos="notext" class="ui-btn-right"></a>
+      </div><!-- /header -->
+      <div data-role="content">
+        <form action="#" id="createform">
+          <select name="category" id="category">
+             <option value="standard">Normale Notiz</option>
+             <option value="restaurant">Restaurant</option>
+             <option value="parking">Parkplatz</option>
+             <option value="shopping">Shopping</option>
+          </select>
+          <label for="titel" class="ui-hidden-accessible">Titel</label>
+          <input type="text" name="title" id="title" value="" placeholder="Titel"/>
+          <textarea name="text" id="text"></textarea>
+          <div id="rating" class="categoryelement">
+            <label for="slider-fill">Bewertung</label>
+            <input type="range" name="value" value="1" min="1" max="5" data-highlight="true" />
+          </div>
+          <div id="cost" class="categoryelement">
+            <label for="basic">Preis</label>
+            <input type="number" pattern="[0-9]*" name="value" value="" />
+          </div>
+          <a href="#" data-role="button"  data-theme="b" onclick="alert('Formulardaten verarbeiten');">Speichern</a>
+        </form>
+      </div><!-- /content -->
+      <div data-role="footer" data-position="fixed"> 
+        <h4>ZIM-Talk</h4> 
+      </div> 
+    </div><!-- /page -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/jquery.mobile-1.4.0.min.js"></script>
+  </body>
+</html>

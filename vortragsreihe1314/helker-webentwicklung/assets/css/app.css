@@ -1,0 +1,14 @@
+.categoryelement {
+  display: none;
+}
+.ui-li-category {
+  float:left;
+  font-size: 1.5em;
+  padding-right: 20px;
+}
+.ui-li-category i {
+  margin-top:50%;
+}
+#noteid {
+  display: none;
+}
