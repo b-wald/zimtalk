@@ -41,7 +41,7 @@ function renderList() {
       note = JSON.parse(json);
       var date = new Date(note[0]["timestamp"]);
       var ts = date.getDate()+'.'+(date.getMonth()+1);
-      var value = (list_settings[note[0]["category"]]["value"]) ? '<span class="ui-li-count">'+note[0]["value"]+list_settings[note[0]["category"]]["value"]+'</span>' : "";
+      var value = (note[0]["value"]) ? '<span class="ui-li-count">'+note[0]["value"]+list_settings[note[0]["category"]]["value"]+'</span>' : "";
       $("#notes").append('<li id="'+key+'" data-icon="false"><a href="#detail?id='+key+'"><div class="ui-li-category"><i class="fa '+list_settings[note[0]["category"]]["icon"]+'"></i></div><h3>'+note[0]["title"]+'</h3><p>'+note[0]["text"]+'</p>'+value+'</a></li>');
     }
   }
@@ -114,7 +114,7 @@ function createNote() {
     'category' : $( "#category option:selected").val(),
     'title' : $('#title').val(),
     'text' : $('#text').val(),
-    'value' : $('input[name="value"]').val(),
+    'value' : $('input[name="value"]:visible').val(),
     'latitude' : latitude,
     'longitude' : longitude,
   }];
