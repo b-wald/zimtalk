@@ -36,6 +36,7 @@ function handle_errors(error) {
 function renderList() {
   $("#notes").empty();
   for (var key in localStorage){
+    if(key=="jStorage") continue; //jStorage Bugfix
     json = localStorage.getItem(key);
     if(json) {
       note = JSON.parse(json);
